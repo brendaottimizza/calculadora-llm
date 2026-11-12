@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <title>Ottimizza — Calculadora e comparador de custos de LLMs</title>
+    <meta name="description" content="Calcule e compare em reais e dólares o custo de tokens de entrada e saída de modelos de LLM da OpenAI, Anthropic, AionLabs e outros, com catálogo ao vivo da OpenRouter." />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Ottimizza — Calculadora de LLMs" />
+    <meta property="og:description" content="Calcule e compare em reais e dólares o custo de tokens de entrada e saída de modelos de LLM da OpenAI, Anthropic, AionLabs e outros, com catálogo ao vivo da OpenRouter." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Ottimizza — Calculadora de LLMs" />
+    <meta name="twitter:description" content="Calcule e compare em reais e dólares o custo de tokens de entrada e saída de modelos de LLM da OpenAI, Anthropic, AionLabs e outros, com catálogo ao vivo da OpenRouter." />
+    <link rel="icon" type="image/x-icon" href="%BASE_URL%favicon.ico" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta name="theme-color" content="#090d16" />
+    <script>
+      // Restore the saved theme before paint; dark remains the default.
+      try {
+        if (JSON.parse(localStorage.getItem('ts:theme')) === 'light') {
+          document.documentElement.classList.replace('dark', 'light');
+          document.querySelector('meta[name="theme-color"]').content = '#f8fafc';
+        }
+      } catch { /* Keep the default when storage is unavailable or invalid. */ }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

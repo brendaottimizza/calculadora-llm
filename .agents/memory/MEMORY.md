@@ -1,0 +1,2 @@
+- [Escopo da calculadora](calculator-scope.md) — Modelos AionLabs devem permanecer disponíveis mesmo quando ausentes do catálogo externo.
+- [Marca da aplicação](branding.md) — A calculadora pertence à Ottimizza; alterações de marca devem preservar funcionalidades e tema escuro.

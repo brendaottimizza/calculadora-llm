@@ -1,0 +1,86 @@
+/* Dark chart colors match the original design exactly. */
+:root {
+  --ts-chart-grid: #1e293b;
+  --ts-chart-x: #94a3b8;
+  --ts-chart-y: #64748b;
+  --ts-chart-axis: #334155;
+  --ts-chart-baseline: #475569;
+}
+
+html.light {
+  color-scheme: light;
+  --background: 210 40% 98%;
+  --foreground: 222 47% 11%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 11%;
+  --card-border: 214 32% 91%;
+  --border: 214 32% 91%;
+  --input: 214 32% 91%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 47% 11%;
+  --popover-border: 214 32% 91%;
+  --secondary: 210 40% 96%;
+  --secondary-foreground: 215 25% 27%;
+  --muted: 210 40% 96%;
+  --muted-foreground: 215 16% 47%;
+  --accent: 210 40% 96%;
+  --accent-foreground: 222 47% 11%;
+  --ts-chart-grid: #e2e8f0;
+  --ts-chart-x: #475569;
+  --ts-chart-y: #475569;
+  --ts-chart-axis: #cbd5e1;
+  --ts-chart-baseline: #94a3b8;
+}
+
+body { transition: background-color .25s ease, color .25s ease; }
+.ts-card {
+  transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease, background-color .25s ease;
+}
+footer, nav, h1, h2, h3, p, label, input, button, nav span {
+  transition: background-color .25s ease, color .25s ease, border-color .25s ease;
+}
+
+html.light body { background: #f8fafc; }
+html.light body::before { background: none; }
+html.light .ts-card {
+  background: #fff;
+  border-color: #e2e8f0;
+  box-shadow: 0 1px 3px rgb(15 23 42 / .06);
+}
+html.light .ts-card-hover:hover {
+  border-color: rgb(59 130 246 / .45);
+  box-shadow: 0 10px 30px -12px rgb(59 130 246 / .2);
+}
+
+/* Adapt the existing utility palette without changing component layout or fonts. */
+html.light :is(.text-white, .text-slate-100, .text-slate-200) { color: #0f172a; }
+html.light .text-slate-300 { color: #334155; }
+html.light :is(.text-slate-400, .text-slate-500, .text-slate-600) { color: #475569; }
+html.light .text-slate-700 { color: #64748b; }
+html.light :is(.text-blue-300, .text-blue-400) { color: #1d4ed8; }
+html.light :is(.text-emerald-300, .text-emerald-400\/80) { color: #047857; }
+html.light :is(.text-amber-200\/90, .text-amber-300) { color: #92400e; }
+html.light .text-orange-400 { color: #c2410c; }
+html.light .text-red-400 { color: #b91c1c; }
+html.light .placeholder\:text-slate-500::placeholder { color: #64748b; }
+
+html.light :is(.bg-slate-900\/40, .bg-slate-900\/60, .bg-slate-800\/60, .bg-slate-800\/50) {
+  background-color: #f1f5f9;
+}
+html.light .bg-slate-800 { background-color: #e2e8f0; }
+html.light .bg-\[\#0d131e\] { background-color: #fff; }
+html.light :is(.bg-\[\#0e1420\]\/95, .bg-slate-950\/80) { background-color: rgb(255 255 255 / .98); }
+html.light :is(.border-slate-800, .border-slate-800\/80, .border-slate-700\/70, .border-slate-700\/60, .border-slate-700\/50) {
+  border-color: #e2e8f0;
+}
+html.light .border-slate-600 { border-color: #94a3b8; }
+html.light .divide-slate-800\/80 > :not(:last-child) { border-color: #e2e8f0; }
+html.light .hover\:bg-slate-800:hover,
+html.light .hover\:bg-slate-700:hover { background-color: #e2e8f0; }
+html.light .hover\:text-white:hover { color: #0f172a; }
+html.light .hover\:text-amber-300:hover { color: #92400e; }
+html.light .ts-scroll::-webkit-scrollbar-thumb { background: #cbd5e1; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; }
+}
