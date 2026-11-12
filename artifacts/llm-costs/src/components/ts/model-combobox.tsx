@@ -47,7 +47,6 @@ export function ModelCombobox({ models, selected, favorites, onToggle, onClear }
     else if (e.key === 'End' && open) { e.preventDefault(); move(results.length - 1); }
     else if (e.key === 'Enter' && open && results[active]) { e.preventDefault(); onToggle(results[active].id); }
     else if (e.key === 'Escape') { if (open) { e.preventDefault(); setOpen(false); } else if (query) setQuery(''); }
-    else if (e.key === 'Backspace' && !query && selected.length) onToggle(selected[selected.length - 1]);
   };
 
   return (
