@@ -7,7 +7,7 @@ interface Props { status: CatalogStatus; error: string | null; liveCount: number
 export function CatalogStatusBadge({ status, error, liveCount, onRetry }: Props) {
   const cfg = {
     loading: { dot: 'bg-blue-400 animate-pulse', text: 'Carregando catálogo da OpenRouter…', sub: 'Modelos locais já disponíveis.' },
-    live: { dot: 'bg-emerald-400', text: `${liveCount.toLocaleString('pt-BR')} modelos disponíveis`, sub: 'Preços base públicos da API.' },
+    live: { dot: 'bg-emerald-400', text: `Modelos disponíveis: ${liveCount.toLocaleString('pt-BR')}`, sub: 'Preços base públicos da API.' },
     fallback: { dot: 'bg-amber-400', text: 'Modo offline · catálogo local', sub: `Falha ao carregar: ${error ?? 'erro desconhecido'}` },
   }[status];
   return (
